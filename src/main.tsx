@@ -9,7 +9,7 @@ import Contact from './pages/contact';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/david">
       <Routes>
         <Route path="/" element={<Hero />} />
         <Route path="/menu" element={<Menu />} />
