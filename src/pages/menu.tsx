@@ -559,7 +559,7 @@ export default function MenuPage() {
     <main className="min-h-screen bg-background">
       <Header />
 
-      <div className="pt-[73px]">
+      <div className="pt-[105px]">
         <div className="flex">
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}

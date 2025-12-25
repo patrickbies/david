@@ -32,7 +32,7 @@ export default function ContactPage() {
     <main>
       <Header />
 
-      <section className="min-h-screen pt-[73px] flex flex-col justify-center">
+      <section className="min-h-screen pt-[105px] flex flex-col justify-center">
         <div className="container mx-auto px-6 py-12 lg:py-16">
           <div className="max-w-xl mx-auto">
             <div className="text-center mb-10">

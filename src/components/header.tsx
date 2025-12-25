@@ -19,9 +19,9 @@ export function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
-      <nav className="container mx-auto px-6 py-4">
+      <nav className="lg:mx-20 md:mx-10 px-6 py-2">
         <div className="flex items-center justify-between">
-          <Link to="/" className="group">
+          <Link to="//" className="group">
             <SkywayLogo />
           </Link>
 

@@ -11,7 +11,7 @@ export function Footer({ compact = false }: FooterProps) {
     return (
       <footer className="bg-primary text-primary-foreground py-4 shrink-0">
         <div className="container mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <Link to="/" className="flex items-center gap-2">
+          <Link to="//" className="flex items-center gap-2">
             <div className="w-7 h-7 bg-primary-foreground/20 rounded-full flex items-center justify-center">
               <Plane className="w-3.5 h-3.5" />
             </div>
@@ -30,8 +30,8 @@ export function Footer({ compact = false }: FooterProps) {
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           <div className="md:col-span-2">
-            <Link to="/" className="flex items-center gap-3 mb-6">
-              <SkywayLogo color="white" shouldAnimate={false} />
+            <Link to="//" className="flex items-center gap-3 mb-6">
+              <SkywayLogo shouldAnimate={false} lightMode={true} />
             </Link>
             <p className="opacity-70 leading-relaxed max-w-sm">
               Premium in-flight catering services for private aviation, delivering exceptional culinary experiences at

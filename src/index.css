@@ -176,3 +176,88 @@
   animation: text-fade 0.5s ease-out forwards;
   animation-delay: 1s;
 }
+
+/* Tune these two values to taste */
+.skyway-anim {
+  --wing-slide-x: 420px;
+  /* how far from the RIGHT it starts */
+  --wing-slide-ms: 1400ms;
+  /* long slide duration */
+}
+
+/* Wing + clip polygon move IDENTICALLY */
+.skyway-wing-motion {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: skywayWingSlide var(--wing-slide-ms) cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes skywayWingSlide {
+  from {
+    transform: translateX(var(--wing-slide-x));
+  }
+
+  to {
+    transform: translateX(0px);
+  }
+}
+
+/* Windows drop in sequentially */
+.skyway-win {
+  opacity: 0;
+  animation: skywayWindowDrop 520ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes skywayWindowDrop {
+  from {
+    transform: translateY(-35px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+/* Start windows when the wing is ~finishing.
+   For 1400ms wing:
+   - start around 1100–1250ms */
+.skyway-win-1 {
+  animation-delay: calc(var(--wing-slide-ms) * 0.5);
+}
+
+.skyway-win-2 {
+  animation-delay: calc(var(--wing-slide-ms) * 0.6);
+}
+
+.skyway-win-3 {
+  animation-delay: calc(var(--wing-slide-ms) * 0.67);
+}
+
+.skyway-win-4 {
+  animation-delay: calc(var(--wing-slide-ms) * 0.72);
+}
+
+.skyway-win-5 {
+  animation-delay: calc(var(--wing-slide-ms) * 0.75);
+}
+
+/* Optional: fade/slide text in right after windows begin */
+.skyway-text-fade {
+  opacity: 0;
+  animation: skywayTextFade 650ms ease-out both;
+  animation-delay: calc(var(--wing-slide-ms) * 0.75);
+}
+
+@keyframes skywayTextFade {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

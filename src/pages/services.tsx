@@ -83,7 +83,7 @@ export default function ServicesPage() {
     <main>
       <Header />
 
-      <section className="min-h-screen pt-[73px] flex flex-col">
+      <section className="min-h-screen pt-[105px] flex flex-col">
         <div className="flex-1 container mx-auto px-6 py-12 lg:py-16 flex flex-col">
           <div className="text-center mb-12 lg:mb-16">
             <p className="text-xs tracking-[0.3em] uppercase text-muted-foreground/60 mb-3">What We Offer</p>
